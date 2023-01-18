@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ES">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="index.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <title>Encriptador</title>
+    </head>
+
+    <body>
+        <header>
+            <img class="logo" src="imagenes/Logo.png" alt="logo del encriptador">   
+
+        </header>
+        <main>
+            <section>
+                <textarea class="texto-ingresado" id="inputTexto" cols="30" rows="10" type="text"  placeholder="Introduce el texto aqui.." ></textarea>
+                <div class="frame-1">
+                    <img src="imagenes/Vector.png">
+                    <p>solo letras minusculas y sin acentos</p>
+                </div>
+                <div class="frame-3">
+                        
+
+                    <button class="encriptar" type="button" onclick="encriptar()">
+                        <h1 >encriptar</h1>
+                    </button>
+
+                    <button class="desencriptar" type="button" onclick="desencriptar()">
+                        <h1 >desencriptar</h1>
+                    </button>
+                </div>
+            </section>
+            <section class="rectangulo">
+
+                <img id="imagen" src="imagenes/Muñeco.png">
+
+                <div class="frame-5">
+                    <h1 id="titulo-tm">Ningun mensaje fue encontrado</h1>
+                    <h2 id="subtitulo-tm">Ingresa el texto que desees encriptar o desencriptar</h2>
+                    <textarea id="resolucion" id="inputTexto" type="text"></textarea>
+                </div> 
+                <button id="copiar" type="button" style="display: none;" onclick="copiar()">
+                    <h1>copiar</h1>
+                </button>
+            </section>              
+        </main>
+        <footer>
+            <section class="marca">
+                <ul>
+                    <li><p>by Oscar Fernandez</p></li>
+                    <li><a rel="me" href="https://www.linkedin.com/in/oscar-fernandez-297029250" ><img src="imagenes/linkedin.png" alt="LinkedIn" class="link"></a></li>
+                    <li><a rel="me" href="https://github.com/FernandezOscar96" ><img src="imagenes/github.png" alt="GitHub" class="gh"></a></li>
+                </ul>
+                
+                
+            </section>
+        </footer>
+    </body>
+</html>
+
