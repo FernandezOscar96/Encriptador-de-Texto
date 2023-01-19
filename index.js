@@ -1,17 +1,16 @@
 function ocultar(){
-        document.getElementById("imagen").style.display = "flex";
-        document.getElementById("titulo-tm").style.display = "flex";
-        document.getElementById("subtitulo-tm").style.display = "flex";
-        document.getElementById("resolucion").style.display="none";
-        document.getElementById("copiar").style.display = "none";
+    document.getElementById("imagen").style.display = "flex";
+    document.getElementById("titulo-tm").style.display = "flex";
+    document.getElementById("subtitulo-tm").style.display = "flex";
+    document.getElementById("resolucion").style.display="none";
+    document.getElementById("copiar").style.display = "none";
 }
 function mostrar(){
-            document.getElementById("imagen").style.display = "none";
-            document.getElementById("titulo-tm").style.display = "none";
-            document.getElementById("subtitulo-tm").style.display = "none";
-            document.getElementById("resolucion").style.display="flex";
-            document.getElementById("copiar").style.display = "flex";
-            
+    document.getElementById("imagen").style.display = "none";
+    document.getElementById("titulo-tm").style.display = "none";
+    document.getElementById("subtitulo-tm").style.display = "none";
+    document.getElementById("resolucion").style.display="flex";
+    document.getElementById("copiar").style.display = "flex";          
 }
 function encriptar(){
     var texto= document.getElementById("inputTexto").value.toLowerCase();
@@ -32,8 +31,8 @@ function encriptar(){
             var txtCifrado=txtCifrado.replace(/o/igm, "ober");
             var txtCifrado=txtCifrado.replace(/u/igm, "ufat");
 
-             mostrar();
              document.getElementById("resolucion").innerHTML = txtCifrado;
+             mostrar();
         }
     }
 }
@@ -49,8 +48,7 @@ function desencriptar(){
             alert("por favor solo letras minusculas y sin acentos");
             ocultar();
             
-        }
-    
+        }  
         else{
             var txtCifrado=texto.replace(/enter/igm,"e");
             var txtCifrado=txtCifrado.replace(/imes/igm,"i");
@@ -58,8 +56,8 @@ function desencriptar(){
             var txtCifrado=txtCifrado.replace(/ober/igm,"o");
             var txtCifrado=txtCifrado.replace(/ufat/igm,"u");
 
-            mostrar();
             document.getElementById("resolucion").innerHTML = txtCifrado;
+            mostrar();
         } 
     }
 }
