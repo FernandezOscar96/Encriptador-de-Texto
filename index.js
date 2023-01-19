@@ -11,7 +11,12 @@ function encriptar(){
     }
     else{
         if(document.getElementById("inputTexto").value.startsWith(texto)==false){
-            alert("por favor solo letras minusculas y sin acentos");    
+            alert("por favor solo letras minusculas y sin acentos");
+            document.getElementById("imagen").style.display = "flex";
+            document.getElementById("titulo-tm").style.display = "flex";
+            document.getElementById("subtitulo-tm").style.display = "flex";
+            document.getElementById("resolucion").style.display="none";
+            document.getElementById("copiar").style.display = "none";    
         }
         else{
             var txtCifrado=texto.replace(/e/igm, "enter");
@@ -45,6 +50,11 @@ function desencriptar(){
     else{
         if(document.getElementById("inputTexto").value.startsWith(texto)==false){
             alert("por favor solo letras minusculas y sin acentos");
+            document.getElementById("imagen").style.display = "flex";
+            document.getElementById("titulo-tm").style.display = "flex";
+            document.getElementById("subtitulo-tm").style.display = "flex";
+            document.getElementById("resolucion").style.display="none";
+            document.getElementById("copiar").style.display = "none"; 
             
         }
     
