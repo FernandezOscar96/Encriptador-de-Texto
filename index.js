@@ -13,16 +13,19 @@ function mostrar(){
     document.getElementById("copiar").style.display = "flex";          
 }
 function encriptar(){
-    var texto= document.getElementById("inputTexto").value.toLowerCase();
+    var texto= document.getElementById("inputTexto").value;
+    var validador= texto.match(/^[a-z ]*$/);
 
     if(texto==""){
-        alert("por favor, ingrese un texto para poder encriptar.");
+        alert("por favor, ingrese un texto para poder desencriptar.");
         ocultar();
     }
     else{
-        if(document.getElementById("inputTexto").value.startsWith(texto)==false){
+        if(!validador||validador===0){
             alert("por favor solo letras minusculas y sin acentos");
-            ocultar(); 
+            ocultar();
+            location.reload();
+        
         }
         else{
             var txtCifrado=texto.replace(/e/igm, "enter");
@@ -31,23 +34,24 @@ function encriptar(){
             var txtCifrado=txtCifrado.replace(/o/igm, "ober");
             var txtCifrado=txtCifrado.replace(/u/igm, "ufat");
 
-             document.getElementById("resolucion").innerHTML = txtCifrado;
-             mostrar();
+            document.getElementById("resolucion").innerHTML = txtCifrado;
+            mostrar();
         }
     }
 }
 function desencriptar(){
-    var texto= document.getElementById("inputTexto").value.toLowerCase();
-
+    var texto= document.getElementById("inputTexto").value;
+    var validador= texto.match(/^[a-z ]*$/);
     if(texto==""){
         alert("por favor, ingrese un texto para poder desencriptar.");
         ocultar();
+        
     }
     else{
-        if(document.getElementById("inputTexto").value.startsWith(texto)==false){
+        if(!validador||validador===0){
             alert("por favor solo letras minusculas y sin acentos");
             ocultar();
-            
+            location.reload();
         }  
         else{
             var txtCifrado=texto.replace(/enter/igm,"e");
@@ -63,7 +67,6 @@ function desencriptar(){
 }
 function copiar(){
     var duplicar=document.querySelector("#resolucion");
-
     duplicar.select();
     document.execCommand("copy");
 }
